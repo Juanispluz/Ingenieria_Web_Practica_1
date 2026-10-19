@@ -1,0 +1,79 @@
+--- 1 catalogo
+[{"id":1,"nombre":"Cuaderno","descripcion":"Cuaderno de 100 hojas para tus clases.","precio":12000},{"id":2,"nombre":"Bolígrafo","descripcion":"Bolígrafo de tinta azul.","precio":2500},{"id":3,"nombre":"Carpeta","descripcion":"Carpeta para organizar documentos.","precio":6000},{"id":4,"nombre":"Resaltador","descripcion":"Resaltador amarillo.","precio":4000},{"id":5,"nombre":"Agenda","descripcion":"Agenda para planear tus actividades.","precio":18000},{"id":6,"nombre":"Estuche","descripcion":"Estuche para tus útiles.","precio":15000}]
+[HTTP 200]
+--- pagina /
+
+[HTTP 200]
+--- pagina /carrito
+
+[HTTP 200]
+--- js
+
+[HTTP 200]
+--- pedidos vacio
+[]
+[HTTP 200]
+--- 3 valido
+{"id":1,"nombre":"Ana Ejemplo","correo":"ana@example.com","fecha":"2026-10-19T14:36:59.507Z","total":26500,"items":[{"producto_id":1,"nombre":"Cuaderno","cantidad":2,"precio_unitario":12000,"subtotal":24000},{"producto_id":2,"nombre":"Bolígrafo","cantidad":1,"precio_unitario":2500,"subtotal":2500}]}
+[HTTP 201]
+--- 4 nombre vacio
+{"error":"El nombre es obligatorio."}
+[HTTP 400]
+--- 4 correo vacio
+{"error":"El correo es obligatorio."}
+[HTTP 400]
+--- 5 items vacio
+{"error":"El pedido debe contener al menos un producto."}
+[HTTP 400]
+--- 6 cantidad 0
+{"error":"La cantidad del producto 1 debe ser un entero positivo."}
+[HTTP 400]
+--- 6 cantidad -2
+{"error":"La cantidad del producto 1 debe ser un entero positivo."}
+[HTTP 400]
+--- 6 cantidad 1.5
+{"error":"La cantidad del producto 1 debe ser un entero positivo."}
+[HTTP 400]
+--- 6 cantidad texto
+{"error":"La cantidad del producto 1 debe ser un entero positivo."}
+[HTTP 400]
+--- 7 producto 99
+{"error":"El producto 99 no existe."}
+[HTTP 400]
+--- 8 total alterado
+{"id":2,"nombre":"Luis","correo":"luis@example.com","fecha":"2026-10-19T14:36:59.562Z","total":36000,"items":[{"producto_id":5,"nombre":"Agenda","cantidad":2,"precio_unitario":18000,"subtotal":36000}]}
+[HTTP 201]
+--- json invalido
+{"error":"El cuerpo debe ser JSON válido."}
+[HTTP 400]
+--- body array
+{"error":"El cuerpo debe ser un objeto JSON con nombre, correo e items."}
+[HTTP 400]
+--- 415
+{"error":"Envía Content-Type: application/json."}
+[HTTP 415]
+--- 404 producto
+{"error":"Producto no encontrado."}
+[HTTP 404]
+--- producto 1
+{"id":1,"nombre":"Cuaderno","descripcion":"Cuaderno de 100 hojas para tus clases.","precio":12000}
+[HTTP 200]
+--- ruta inexistente
+{"error":"Ruta no encontrada."}
+[HTTP 404]
+--- 9 tras reinicio
+[{"id":2,"nombre":"Luis","correo":"luis@example.com","fecha":"2026-10-19T14:36:59.562Z","total":36000,"items":[{"producto_id":5,"nombre":"Agenda","cantidad":2,"precio_unitario":18000,"subtotal":36000}]},{"id":1,"nombre":"Ana Ejemplo","correo":"ana@example.com","fecha":"2026-10-19T14:36:59.507Z","total":26500,"items":[{"producto_id":1,"nombre":"Cuaderno","cantidad":2,"precio_unitario":12000,"subtotal":24000},{"producto_id":2,"nombre":"Bolígrafo","cantidad":1,"precio_unitario":2500,"subtotal":2500}]}]
+[HTTP 200]
+┌─────────┬────┬───────────────┬────────────────────┬────────────────────────────┬───────┐
+│ (index) │ id │ nombre        │ correo             │ fecha                      │ total │
+├─────────┼────┼───────────────┼────────────────────┼────────────────────────────┼───────┤
+│ 0       │ 1  │ 'Ana Ejemplo' │ 'ana@example.com'  │ '2026-10-19T14:36:59.507Z' │ 26500 │
+│ 1       │ 2  │ 'Luis'        │ 'luis@example.com' │ '2026-10-19T14:36:59.562Z' │ 36000 │
+└─────────┴────┴───────────────┴────────────────────┴────────────────────────────┴───────┘
+┌─────────┬────┬───────────┬─────────────┬──────────┬─────────────────┐
+│ (index) │ id │ pedido_id │ producto_id │ cantidad │ precio_unitario │
+├─────────┼────┼───────────┼─────────────┼──────────┼─────────────────┤
+│ 0       │ 1  │ 1         │ 1           │ 2        │ 12000           │
+│ 1       │ 2  │ 1         │ 2           │ 1        │ 2500            │
+│ 2       │ 3  │ 2         │ 5           │ 2        │ 18000           │
+└─────────┴────┴───────────┴─────────────┴──────────┴─────────────────┘

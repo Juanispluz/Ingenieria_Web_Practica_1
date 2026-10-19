@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pedidos | La Libreta</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header><a class="marca" href="/">La Libreta</a><nav aria-label="Principal"><a href="/">Catálogo</a><a href="/carrito">Carrito <span class="contador" id="contador">0</span></a><a href="/pedidos">Pedidos</a></nav></header>
+  <main>
+    <h1>Pedidos registrados</h1>
+    <p id="estado" class="estado" role="status">Consultando pedidos…</p>
+    <section id="pedidos" class="lista-pedidos" aria-label="Pedidos"></section>
+  </main>
+  <footer>La Libreta · Papelería académica. Compra simulada sin cobro.</footer>
+  <script src="/carrito-storage.js"></script>
+  <script src="/pedidos.js"></script>
+</body>
+</html>

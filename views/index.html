@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Catálogo | La Libreta</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header><a class="marca" href="/">La Libreta</a><nav aria-label="Principal"><a href="/">Catálogo</a><a href="/carrito">Carrito <span class="contador" id="contador">0</span></a><a href="/pedidos">Pedidos</a></nav></header>
+  <main>
+    <p class="eyebrow">ÚTILES PARA ESTUDIAR</p>
+    <h1>Tu próxima idea empieza aquí</h1>
+    <p>Elige tus útiles, revisa el carrito y registra tu pedido.</p>
+    <p id="estado" class="estado" role="status">Consultando catálogo…</p>
+    <section id="catalogo" class="catalogo" aria-label="Productos"></section>
+  </main>
+  <footer>La Libreta · Papelería académica. Compra simulada sin cobro.</footer>
+  <script src="/carrito-storage.js"></script>
+  <script src="/catalogo.js"></script>
+</body>
+</html>

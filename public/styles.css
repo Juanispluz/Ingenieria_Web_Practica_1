@@ -1,0 +1,24 @@
+:root{font-family:system-ui,sans-serif;color:#17312c;background:#f4f6f0;line-height:1.55}
+*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1100px;margin:auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid #ccd6cc}
+a{color:#155c48}nav{display:flex;gap:20px;flex-wrap:wrap}.marca{font-weight:800;text-decoration:none;font-size:1.3rem}
+main{min-height:75vh;padding-top:42px}h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.12;max-width:700px;margin:12px 0 18px}
+.eyebrow{font-size:.8rem;letter-spacing:.13em;font-weight:700}.catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:26px}
+.producto{background:white;border:1px solid #d3ddd1;padding:24px;border-radius:10px;display:flex;flex-direction:column;align-items:flex-start}
+h2{font-size:1.2rem;margin:0}.producto p{margin:12px 0}.precio{font-weight:800;font-size:1.3rem}
+button,.boton{background:#155c48;color:white;border:0;border-radius:6px;padding:11px 16px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button{margin-top:auto}button:hover,.boton:hover{background:#0e4132}a:focus-visible,button:focus-visible{outline:3px solid #cf8a18;outline-offset:4px}
+footer{font-size:.9rem;color:#53665f;border-top:1px solid #ccd6cc}#estado{min-height:1.5em}@media(max-width:600px){header{align-items:flex-start;flex-direction:column}}
+
+/* Carrito, formulario y pedidos */
+.contador{background:#155c48;color:white;border-radius:999px;padding:0 8px;font-size:.8rem;font-weight:700}
+.estado{min-height:1.5em}.estado.error,.mensaje.error{color:#9b1c1c;font-weight:600}
+.tabla{width:100%;border-collapse:collapse;background:white;border:1px solid #d3ddd1;border-radius:10px;overflow:hidden;margin:20px 0}
+.tabla th,.tabla td{padding:12px;text-align:left;border-bottom:1px solid #e3e9e1}.tabla tfoot th{font-size:1.1rem}
+.tabla input{width:72px;padding:6px;font:inherit}.tabla button{margin:0}
+.panel{background:white;border:1px solid #d3ddd1;border-radius:10px;padding:24px;margin:20px 0;max-width:640px}
+.panel label{display:block;margin:12px 0;font-weight:600}.panel input{display:block;width:100%;padding:10px;margin-top:4px;font:inherit;border:1px solid #b8c6b6;border-radius:6px}
+.panel.exito{border-color:#155c48}.lista-pedidos .panel{max-width:none}
+.boton.secundario,button.secundario{background:white;color:#155c48;border:1px solid #155c48}
+.boton.secundario:hover,button.secundario:hover{background:#e7efe9}
+@media(max-width:600px){.tabla th:nth-child(2),.tabla td:nth-child(2){display:none}}

@@ -1,0 +1,10 @@
+catalogo: 6 | 6 productos disponibles.
+tras agregar: Bolígrafo agregado al carrito. contador 2
+storage [{"producto_id":1,"cantidad":1},{"producto_id":2,"cantidad":1}]
+carrito: 2 producto(s) en el carrito. total $ 14.500
+cantidad 3 → total $ 38.500
+nombre vacío → Escribe tu nombre y tu correo.
+error: Escribe tu nombre y tu correo. true
+confirmación visible: true | Pedido #1 a nombre de Ana UI | Total: $ 38.500 | storage []
+tras quitar: Tu carrito está vacío. Agrega productos desde el catálogo.
+pedidos: 1 pedido(s) registrados. | Pedido #1Ana UI · x@y.co · 19/10/2026, 9:42 a. m.3 × Cuaderno ($ 12.000 c/u) — $ 36.0001 × Bolígrafo ($ 2.500 c/u) — $ 2.500Total: $ 38.500

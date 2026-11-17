@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="OpenCode" version="24.7.17">
+  <diagram id="1.-Esquema" name="1. Esquema">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="&lt;b style=&quot;font-size:22px;color:#0B2E4F&quot;&gt;Ontología de La Libreta — esquema (TBox)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;color:#4B5563&quot;&gt;Clases, jerarquía de subclases y propiedades. Las clases se muestran con sus atributos tipados; las flechas de objeto van del dominio al rango.&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="1680" height="60" as="geometry"/>
+        </mxCell>        <mxCell id="escritura" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;ProductoDeEscritura&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center;font-size:10px;color:#7A5B00;font-style:italic&quot;&gt;hereda atributos de Producto&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#BF9000;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="120" width="300" height="70" as="geometry"/>
+        </mxCell>        <mxCell id="organizacion" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;ProductoDeOrganizacion&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center;font-size:10px;color:#7A5B00;font-style:italic&quot;&gt;hereda atributos de Producto&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#BF9000;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="120" width="300" height="70" as="geometry"/>
+        </mxCell>        <mxCell id="comprador" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;Comprador&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;div&gt;nombreComprador : xsd:string&lt;/div&gt;&lt;div&gt;correoComprador : xsd:string&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="330" width="300" height="200" as="geometry"/>
+        </mxCell>        <mxCell id="pedido" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;Pedido&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;div&gt;fechaPedido : xsd:dateTime&lt;/div&gt;&lt;div&gt;totalPedido : xsd:integer&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="460" y="330" width="300" height="200" as="geometry"/>
+        </mxCell>        <mxCell id="detalle" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;DetallePedido&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;div&gt;cantidad : xsd:integer&lt;/div&gt;&lt;div&gt;precioUnitarioCompra : xsd:integer&lt;/div&gt;&lt;div&gt;subtotalLinea : xsd:integer (derivada)&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="860" y="330" width="340" height="200" as="geometry"/>
+        </mxCell>        <mxCell id="producto" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;Producto&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #333333;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:11px;line-height:1.5&quot;&gt;&lt;div&gt;nombreProducto : xsd:string&lt;/div&gt;&lt;div&gt;descripcionProducto : xsd:string&lt;/div&gt;&lt;div&gt;precioActual : xsd:integer&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=2;align=left;verticalAlign=top;spacing=8;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="330" width="340" height="200" as="geometry"/>
+        </mxCell>        <mxCell id="e-realiza" value="&lt;b&gt;realizaPedido&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=11;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="comprador" target="pedido">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="e-realiza-from" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="368" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-realiza-to" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;0..*&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="420" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-detalle" value="&lt;b&gt;tieneDetalle&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=11;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="pedido" target="detalle">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="e-detalle-from" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="768" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-detalle-to" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;1..*&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="820" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-corresponde" value="&lt;b&gt;correspondeA&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=11;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="detalle" target="producto">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="e-corresponde-from" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;0..*&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1208" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-corresponde-to" value="&lt;span style=&quot;font-size:10px;color:#4B5563&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="440" width="34" height="20" as="geometry"/>
+        </mxCell>        <mxCell id="e-sub-escritura" value="&lt;b&gt;esSubclaseDe&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=2;strokeColor=#BF9000;fontSize=10;fontColor=#BF9000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="escritura" target="producto">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="e-sub-organizacion" value="&lt;b&gt;esSubclaseDe&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=2;strokeColor=#BF9000;fontSize=10;fontColor=#BF9000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="organizacion" target="producto">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="annotation-hierarchy" value="La jerarquía no crea tablas: las subclases son conceptos del dominio." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#4B5563;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="550" width="480" height="24" as="geometry"/>
+        </mxCell>        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9CA3AF;strokeWidth=1.5;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="650" width="780" height="380" as="geometry"/>
+        </mxCell>        <mxCell id="legend-title" value="&lt;b style=&quot;font-size:14px&quot;&gt;Leyenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="78" y="664" width="200" height="24" as="geometry"/>
+        </mxCell>        <mxCell id="leg-class" value="&lt;b&gt;Producto&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=1.8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="708" width="140" height="32" as="geometry"/>
+        </mxCell>        <mxCell id="leg-label-class" value="&lt;b&gt;Clase&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;rectángulo con nombre y atributos tipados&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="704" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="leg-subclass-a" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="772" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-subclass-b" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="772" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-subclass" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=0;endSize=12;strokeWidth=2;strokeColor=#BF9000;" edge="1" parent="1" source="leg-subclass-a" target="leg-subclass-b">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="leg-label-subclass" value="&lt;b&gt;Subclase de (⊑)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;la flecha apunta a la superclase&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="754" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="leg-object-a" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="822" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-object-b" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="822" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-object" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;" edge="1" parent="1" source="leg-object-a" target="leg-object-b">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="leg-label-object" value="&lt;b&gt;Propiedad de objeto&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;enlace rotulado: dominio → rango&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="804" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="leg-data" value="precio : xsd:integer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E79;strokeWidth=1.8;fontSize=8;align=left;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="858" width="140" height="32" as="geometry"/>
+        </mxCell>        <mxCell id="leg-label-data" value="&lt;b&gt;Propiedad de datos&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;atributo dentro de la clase, con tipo xsd&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="854" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="leg-instance-a" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="922" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-instance-b" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="922" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="leg-instance" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=1;endSize=12;strokeWidth=2;strokeColor=#6B7280;dashed=1;" edge="1" parent="1" source="leg-instance-a" target="leg-instance-b">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="leg-label-instance" value="&lt;b&gt;instanciaDe&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;pertenencia individuo → clase (página 2)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="904" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="leg-ind" value="&lt;span style=&quot;text-decoration:underline&quot;&gt;ana&lt;/span&gt; : Comprador" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.6;dashed=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="958" width="160" height="32" as="geometry"/>
+        </mxCell>        <mxCell id="leg-label-individual" value="&lt;b&gt;Individuo&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;nombre subrayado; clase después de «:»&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="954" width="560" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="notes" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#9CA3AF;strokeWidth=1.5;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="880" y="650" width="860" height="380" as="geometry"/>
+        </mxCell>        <mxCell id="notes-title" value="&lt;b style=&quot;font-size:14px&quot;&gt;Decisiones y alcance&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="898" y="664" width="400" height="24" as="geometry"/>
+        </mxCell>        <mxCell id="notes-body" value="• Dos subclases justificadas por el catálogo: ProductoDeEscritura (Cuaderno, Bolígrafo,&lt;br&gt;  Resaltador, Agenda) y ProductoDeOrganizacion (Carpeta, Estuche). No se declaran disjuntas.&lt;br&gt;• Comprador se reifica como clase aunque SQLite guarde nombre y correo en pedidos.&lt;br&gt;  No se crea una tabla nueva: la ontología describe al agente, no solo dos columnas.&lt;br&gt;• precioUnitarioCompra es el precio congelado de la línea; precioActual es el precio vigente&lt;br&gt;  del catálogo. Si cambia el precio actual, el pedido histórico no se altera.&lt;br&gt;• totalPedido y subtotalLinea son valores derivados de las líneas; no son precios enviados&lt;br&gt;  por el cliente. La app los calcula con los precios de SQLite.&lt;br&gt;• La ontología describe significados y hechos; no valida formularios ni ejecuta inferencias.&lt;br&gt;  Las reglas (cantidad &amp;gt; 0, correo con @, al menos un ítem) viven en la aplicación.&lt;br&gt;• Alcance: catálogo, comprador, pedido y detalle. Fuera: pago, envío, inventario, cuentas,&lt;br&gt;  descuentos y reseñas.&lt;br&gt;• Cardinalidades: cada Pedido tiene 1..* DetallePedido y exactamente 1 Comprador; cada&lt;br&gt;  DetallePedido corresponde a exactamente 1 Producto.&lt;br&gt;• En los extremos, el número indica cuántas instancias de esa clase participan por instancia&lt;br&gt;  de la otra (p. ej., 1 comprador por pedido; 1..* detalles por pedido)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;lineHeight=1.35;" vertex="1" parent="1">
+          <mxGeometry x="898" y="696" width="824" height="320" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2.-Individuos" name="2. Individuos">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="&lt;b style=&quot;font-size:22px;color:#0B2E4F&quot;&gt;Ontología de La Libreta — individuos y hechos (ABox)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;color:#4B5563&quot;&gt;Instancias de las clases del esquema. El nombre subrayado y el sufijo «: Clase» indican pertenencia; las líneas discontinuas conectan cada individuo con su clase.&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1780" height="60" as="geometry"/>
+        </mxCell>        <mxCell id="chip-comprador" value="&lt;b&gt;«Clase» Comprador&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="250" height="50" as="geometry"/>
+        </mxCell>        <mxCell id="chip-pedido" value="&lt;b&gt;«Clase» Pedido&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="110" width="300" height="50" as="geometry"/>
+        </mxCell>        <mxCell id="chip-detalle" value="&lt;b&gt;«Clase» DetallePedido&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="355" width="290" height="50" as="geometry"/>
+        </mxCell>        <mxCell id="chip-escritura" value="&lt;b&gt;«Clase» ProductoDeEscritura&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="365" width="350" height="50" as="geometry"/>
+        </mxCell>        <mxCell id="chip-organizacion" value="&lt;b&gt;«Clase» ProductoDeOrganizacion&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="835" width="350" height="50" as="geometry"/>
+        </mxCell>        <mxCell id="ana" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;ana&lt;/span&gt; : Comprador&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;nombreComprador  &amp;quot;Ana Ejemplo&amp;quot;&lt;/div&gt;&lt;div&gt;correoComprador  &amp;quot;ana@example.com&amp;quot;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="250" height="150" as="geometry"/>
+        </mxCell>        <mxCell id="pedido001" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;pedido001&lt;/span&gt; : Pedido&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;fechaPedido  &amp;quot;2026-10-19T14:36:47Z&amp;quot;&lt;/div&gt;&lt;div&gt;totalPedido  26500&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="260" width="300" height="160" as="geometry"/>
+        </mxCell>        <mxCell id="detalle001" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;detalle001&lt;/span&gt; : DetallePedido&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;cantidad  2&lt;/div&gt;&lt;div&gt;precioUnitarioCompra  12000&lt;/div&gt;&lt;div&gt;subtotalLinea  24000&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="780" y="180" width="290" height="160" as="geometry"/>
+        </mxCell>        <mxCell id="detalle002" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;detalle002&lt;/span&gt; : DetallePedido&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;cantidad  1&lt;/div&gt;&lt;div&gt;precioUnitarioCompra  2500&lt;/div&gt;&lt;div&gt;subtotalLinea  2500&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="780" y="420" width="290" height="160" as="geometry"/>
+        </mxCell>        <mxCell id="cuaderno001" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;cuaderno001&lt;/span&gt; : ProductoDeEscritura&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;nombreProducto  &amp;quot;Cuaderno&amp;quot;&lt;/div&gt;&lt;div&gt;descripcionProducto&lt;/div&gt;&lt;div&gt;  &amp;quot;Cuaderno de 100 hojas...&amp;quot;&lt;/div&gt;&lt;div&gt;precioActual  12000&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="180" width="350" height="170" as="geometry"/>
+        </mxCell>        <mxCell id="boligrafo001" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;boligrafo001&lt;/span&gt; : ProductoDeEscritura&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;nombreProducto  &amp;quot;Bolígrafo&amp;quot;&lt;/div&gt;&lt;div&gt;descripcionProducto&lt;/div&gt;&lt;div&gt;  &amp;quot;Bolígrafo de tinta azul.&amp;quot;&lt;/div&gt;&lt;div&gt;precioActual  2500&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="430" width="350" height="170" as="geometry"/>
+        </mxCell>        <mxCell id="carpeta001" value="&lt;div style=&quot;text-align:left;font-size:12px&quot;&gt;&lt;span style=&quot;text-decoration:underline;font-weight:bold&quot;&gt;carpeta001&lt;/span&gt; : ProductoDeOrganizacion&lt;/div&gt;&lt;hr style=&quot;border:none;border-top:1px solid #374151;margin:4px 0 6px 0&quot;/&gt;&lt;div style=&quot;text-align:left;font-size:10px;line-height:1.55&quot;&gt;&lt;div&gt;nombreProducto  &amp;quot;Carpeta&amp;quot;&lt;/div&gt;&lt;div&gt;descripcionProducto&lt;/div&gt;&lt;div&gt;  &amp;quot;Carpeta para organizar...&amp;quot;&lt;/div&gt;&lt;div&gt;precioActual  6000&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;dashed=1;align=left;verticalAlign=top;spacing=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="650" width="350" height="170" as="geometry"/>
+        </mxCell>        <mxCell id="m-ana" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="ana" target="chip-comprador">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-pedido001" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="pedido001" target="chip-pedido">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-detalle001" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="detalle001" target="chip-detalle">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-detalle002" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="detalle002" target="chip-detalle">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-cuaderno001" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="cuaderno001" target="chip-escritura">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-boligrafo001" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="boligrafo001" target="chip-escritura">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="m-carpeta001" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;fontSize=10;" edge="1" parent="1" source="carpeta001" target="chip-organizacion">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="i-realiza" value="&lt;b&gt;realizaPedido&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=10;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="ana" target="pedido001">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="i-detalle1" value="&lt;b&gt;tieneDetalle&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=10;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="pedido001" target="detalle001">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="i-detalle2" value="&lt;b&gt;tieneDetalle&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=10;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="pedido001" target="detalle002">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="i-corresponde1" value="&lt;b&gt;correspondeA&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=10;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="detalle001" target="cuaderno001">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="i-corresponde2" value="&lt;b&gt;correspondeA&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;fontSize=10;fontColor=#0B5394;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="detalle002" target="boligrafo001">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="notes" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#9CA3AF;strokeWidth=1.5;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="650" height="310" as="geometry"/>
+        </mxCell>        <mxCell id="notes-title" value="&lt;b style=&quot;font-size:14px&quot;&gt;Hechos declarados y consecuencia inferida&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="58" y="534" width="500" height="24" as="geometry"/>
+        </mxCell>        <mxCell id="notes-body" value="Declarado (ABox):&lt;br&gt;• ana realizaPedido pedido001.&lt;br&gt;• pedido001 tieneDetalle detalle001 y detalle002.&lt;br&gt;• detalle001 correspondeA cuaderno001; detalle002 correspondeA boligrafo001.&lt;br&gt;• Valores de datos: 2 × 12000 = 24000 y 1 × 2500 = 2500; total 26500.&lt;br&gt;&amp;nbsp;&lt;br&gt;Inferido por la jerarquía (TBox):&lt;br&gt;ProductoDeEscritura es subclase de Producto  +  cuaderno001 : ProductoDeEscritura&lt;br&gt;∴ cuaderno001 : Producto. Igual para boligrafo001 y carpeta001.&lt;br&gt;&amp;nbsp;&lt;br&gt;carpeta001 no se enlaza en pedido001: se incluye para mostrar la segunda&lt;br&gt;subclase y responder la pregunta 3. El mínimo de seis individuos se cumple&lt;br&gt;con siete (1 comprador, 1 pedido, 2 detalles y 3 productos)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=9.5;lineHeight=1.3;" vertex="1" parent="1">
+          <mxGeometry x="58" y="566" width="614" height="250" as="geometry"/>
+        </mxCell>        <mxCell id="ind-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9CA3AF;strokeWidth=1.5;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="1340" height="160" as="geometry"/>
+        </mxCell>        <mxCell id="ind-legend-title" value="&lt;b style=&quot;font-size:13px&quot;&gt;Leyenda de la página&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="58" y="912" width="300" height="24" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-inst-a" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="62" y="965" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-inst-b" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="172" y="965" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-inst" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;dashed=1;strokeWidth=1.5;strokeColor=#6B7280;" edge="1" parent="1" source="ind-leg-inst-a" target="ind-leg-inst-b">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="ind-leg-inst-label" value="&lt;b&gt;instanciaDe&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;pertenencia del individuo a la clase&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="190" y="952" width="260" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-obj-a" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="62" y="1011" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-obj-b" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="172" y="1011" width="1" height="1" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-obj" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=12;strokeWidth=2;strokeColor=#1F2937;" edge="1" parent="1" source="ind-leg-obj-a" target="ind-leg-obj-b">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>        <mxCell id="ind-leg-obj-label" value="&lt;b&gt;propiedad de objeto&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;hecho declarado entre individuos&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="190" y="998" width="260" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-ind" value="&lt;span style=&quot;text-decoration:underline&quot;&gt;ana&lt;/span&gt; : Comprador" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;dashed=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="460" y="948" width="180" height="34" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-ind-label" value="&lt;b&gt;individuo&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;nombre subrayado; clase después de «:»&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="658" y="952" width="340" height="40" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-chip" value="&lt;b&gt;«Clase» Producto&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#6B7280;strokeWidth=1.5;dashed=1;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="460" y="998" width="180" height="34" as="geometry"/>
+        </mxCell>        <mxCell id="ind-leg-chip-label" value="&lt;b&gt;clase de referencia&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px;color:#4B5563&quot;&gt;chip gris: solo indica la clase, no es un individuo&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="658" y="998" width="340" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

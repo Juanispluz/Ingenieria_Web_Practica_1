@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns="http://www.semanticweb.org/lalibreta/ontologia#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#nombreProducto">
+    <rdfs:label xml:lang="es">nombre del producto</rdfs:label>
+    <rdfs:comment xml:lang="es">Nombre comercial del producto en el catálogo.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#tieneDetalle">
+    <rdfs:label xml:lang="es">tiene detalle</rdfs:label>
+    <rdfs:comment xml:lang="es">El pedido contiene una línea. Un pedido tiene una o más líneas; cada línea pertenece a un solo pedido.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Pedido"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#precioActual">
+    <rdfs:label xml:lang="es">precio actual</rdfs:label>
+    <rdfs:comment xml:lang="es">Precio vigente del producto en el catálogo, en pesos colombianos enteros. No es el precio congelado de una línea de pedido.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#ana">
+    <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Comprador"/>
+    <rdfs:label xml:lang="es">Ana Ejemplo</rdfs:label>
+    <nombreComprador>Ana Ejemplo</nombreComprador>
+    <correoComprador>ana@example.com</correoComprador>
+    <realizaPedido>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#pedido001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Pedido"/>
+        <rdfs:label xml:lang="es">Pedido 001</rdfs:label>
+        <fechaPedido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-19T14:36:47+00:00</fechaPedido>
+        <totalPedido rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26500</totalPedido>
+        <tieneDetalle rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#detalle001"/>
+        <tieneDetalle rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#detalle002"/>
+      </owl:NamedIndividual>
+    </realizaPedido>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#descripcionProducto">
+    <rdfs:label xml:lang="es">descripción del producto</rdfs:label>
+    <rdfs:comment xml:lang="es">Descripción del producto en el catálogo.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#cantidad">
+    <rdfs:label xml:lang="es">cantidad</rdfs:label>
+    <rdfs:comment xml:lang="es">Unidades compradas en la línea; entero mayor que cero.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#fechaPedido">
+    <rdfs:label xml:lang="es">fecha del pedido</rdfs:label>
+    <rdfs:comment xml:lang="es">Fecha y hora de registro del pedido en ISO 8601 UTC.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Pedido"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#correoComprador">
+    <rdfs:label xml:lang="es">correo del comprador</rdfs:label>
+    <rdfs:comment xml:lang="es">Correo informado por el comprador; no se asume único ni identidad estable.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Comprador"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#carpeta001">
+    <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#ProductoDeOrganizacion"/>
+    <rdfs:label xml:lang="es">Carpeta 001</rdfs:label>
+    <nombreProducto>Carpeta</nombreProducto>
+    <descripcionProducto>Carpeta para organizar...</descripcionProducto>
+    <precioActual rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</precioActual>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#correspondeA">
+    <rdfs:label xml:lang="es">corresponde a</rdfs:label>
+    <rdfs:comment xml:lang="es">La línea de pedido referencia el producto comprado. Cada línea corresponde a exactamente un producto; un producto puede aparecer en cero o más líneas.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#precioUnitarioCompra">
+    <rdfs:label xml:lang="es">precio unitario de compra</rdfs:label>
+    <rdfs:comment xml:lang="es">Precio congelado de la línea al momento de la compra, en pesos colombianos enteros.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#realizaPedido">
+    <rdfs:label xml:lang="es">realiza pedido</rdfs:label>
+    <rdfs:comment xml:lang="es">El comprador realiza el pedido. Un pedido tiene exactamente un comprador; un comprador puede realizar cero o más pedidos.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Comprador"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Pedido"/>
+  </owl:ObjectProperty>
+  <owl:Ontology rdf:about="http://www.semanticweb.org/lalibreta/ontologia">
+    <rdfs:label xml:lang="es">Ontología de La Libreta</rdfs:label>
+    <rdfs:comment xml:lang="es">Ontología del dominio de La Libreta (papelería académica): catálogo, comprador, pedido y líneas de pedido. Elaborada para el Seguimiento 10 % de Ingeniería Web.</rdfs:comment>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <rdfs:seeAlso rdf:resource="https://protege.stanford.edu/"/>
+  </owl:Ontology>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#subtotalLinea">
+    <rdfs:label xml:lang="es">subtotal de la línea</rdfs:label>
+    <rdfs:comment xml:lang="es">cantidad × precioUnitarioCompra; valor derivado, en pesos colombianos enteros.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#totalPedido">
+    <rdfs:label xml:lang="es">total del pedido</rdfs:label>
+    <rdfs:comment xml:lang="es">Suma de los subtotales de las líneas, en pesos colombianos enteros.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Pedido"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lalibreta/ontologia#nombreComprador">
+    <rdfs:label xml:lang="es">nombre del comprador</rdfs:label>
+    <rdfs:comment xml:lang="es">Nombre informado por el comprador.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Comprador"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#Producto">
+    <rdfs:label xml:lang="es">Producto</rdfs:label>
+    <rdfs:comment xml:lang="es">Artículo del catálogo con nombre, descripción y precio actual.</rdfs:comment>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#boligrafo001">
+    <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#ProductoDeEscritura"/>
+    <rdfs:label xml:lang="es">Bolígrafo 001</rdfs:label>
+    <nombreProducto>Bolígrafo</nombreProducto>
+    <descripcionProducto>Bolígrafo de tinta azul.</descripcionProducto>
+    <precioActual rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</precioActual>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#detalle002">
+    <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:label xml:lang="es">Detalle 002</rdfs:label>
+    <cantidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cantidad>
+    <precioUnitarioCompra rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</precioUnitarioCompra>
+    <subtotalLinea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</subtotalLinea>
+    <correspondeA rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#boligrafo001"/>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#Pedido">
+    <rdfs:label xml:lang="es">Pedido</rdfs:label>
+    <rdfs:comment xml:lang="es">Compra registrada con fecha y total.</rdfs:comment>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#detalle001">
+    <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido"/>
+    <rdfs:label xml:lang="es">Detalle 001</rdfs:label>
+    <cantidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cantidad>
+    <precioUnitarioCompra rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</precioUnitarioCompra>
+    <subtotalLinea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24000</subtotalLinea>
+    <correspondeA>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lalibreta/ontologia#cuaderno001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#ProductoDeEscritura"/>
+        <rdfs:label xml:lang="es">Cuaderno 001</rdfs:label>
+        <nombreProducto>Cuaderno</nombreProducto>
+        <descripcionProducto>Cuaderno de 100 hojas...</descripcionProducto>
+        <precioActual rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</precioActual>
+      </owl:NamedIndividual>
+    </correspondeA>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#DetallePedido">
+    <rdfs:label xml:lang="es">Detalle de pedido</rdfs:label>
+    <rdfs:comment xml:lang="es">Línea de un pedido: producto, cantidad y precio unitario congelado al comprar.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#ProductoDeEscritura">
+    <rdfs:label xml:lang="es">Producto de escritura</rdfs:label>
+    <rdfs:comment xml:lang="es">Producto del catálogo que se usa para escribir, resaltar o registrar: Cuaderno, Bolígrafo, Resaltador y Agenda.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#Comprador">
+    <rdfs:label xml:lang="es">Comprador</rdfs:label>
+    <rdfs:comment xml:lang="es">Agente que realiza un pedido. Se reifica a partir del nombre y el correo guardados en pedidos; no tiene tabla propia ni identidad estable.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lalibreta/ontologia#ProductoDeOrganizacion">
+    <rdfs:label xml:lang="es">Producto de organización</rdfs:label>
+    <rdfs:comment xml:lang="es">Producto del catálogo que guarda, protege u ordena útiles: Carpeta y Estuche.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lalibreta/ontologia#Producto"/>
+  </owl:Class>
+</rdf:RDF>

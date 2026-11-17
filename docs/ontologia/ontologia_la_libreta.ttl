@@ -1,0 +1,167 @@
+@prefix : <http://www.semanticweb.org/lalibreta/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/lalibreta/ontologia> a owl:Ontology ;
+    rdfs:label "Ontología de La Libreta"@es ;
+    rdfs:comment "Ontología del dominio de La Libreta (papelería académica): catálogo, comprador, pedido y líneas de pedido. Elaborada para el Seguimiento 10 % de Ingeniería Web."@es ;
+    rdfs:seeAlso <https://protege.stanford.edu/> ;
+    owl:versionInfo "1.0" .
+
+:ana a :Comprador,
+        owl:NamedIndividual ;
+    rdfs:label "Ana Ejemplo"@es ;
+    :correoComprador "ana@example.com" ;
+    :nombreComprador "Ana Ejemplo" ;
+    :realizaPedido :pedido001 .
+
+:cantidad a owl:DatatypeProperty ;
+    rdfs:label "cantidad"@es ;
+    rdfs:comment "Unidades compradas en la línea; entero mayor que cero."@es ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range xsd:integer .
+
+:carpeta001 a :ProductoDeOrganizacion,
+        owl:NamedIndividual ;
+    rdfs:label "Carpeta 001"@es ;
+    :descripcionProducto "Carpeta para organizar..." ;
+    :nombreProducto "Carpeta" ;
+    :precioActual 6000 .
+
+:correoComprador a owl:DatatypeProperty ;
+    rdfs:label "correo del comprador"@es ;
+    rdfs:comment "Correo informado por el comprador; no se asume único ni identidad estable."@es ;
+    rdfs:domain :Comprador ;
+    rdfs:range xsd:string .
+
+:correspondeA a owl:ObjectProperty ;
+    rdfs:label "corresponde a"@es ;
+    rdfs:comment "La línea de pedido referencia el producto comprado. Cada línea corresponde a exactamente un producto; un producto puede aparecer en cero o más líneas."@es ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range :Producto .
+
+:descripcionProducto a owl:DatatypeProperty ;
+    rdfs:label "descripción del producto"@es ;
+    rdfs:comment "Descripción del producto en el catálogo."@es ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:string .
+
+:fechaPedido a owl:DatatypeProperty ;
+    rdfs:label "fecha del pedido"@es ;
+    rdfs:comment "Fecha y hora de registro del pedido en ISO 8601 UTC."@es ;
+    rdfs:domain :Pedido ;
+    rdfs:range xsd:dateTime .
+
+:nombreComprador a owl:DatatypeProperty ;
+    rdfs:label "nombre del comprador"@es ;
+    rdfs:comment "Nombre informado por el comprador."@es ;
+    rdfs:domain :Comprador ;
+    rdfs:range xsd:string .
+
+:nombreProducto a owl:DatatypeProperty ;
+    rdfs:label "nombre del producto"@es ;
+    rdfs:comment "Nombre comercial del producto en el catálogo."@es ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:string .
+
+:precioActual a owl:DatatypeProperty ;
+    rdfs:label "precio actual"@es ;
+    rdfs:comment "Precio vigente del producto en el catálogo, en pesos colombianos enteros. No es el precio congelado de una línea de pedido."@es ;
+    rdfs:domain :Producto ;
+    rdfs:range xsd:integer .
+
+:precioUnitarioCompra a owl:DatatypeProperty ;
+    rdfs:label "precio unitario de compra"@es ;
+    rdfs:comment "Precio congelado de la línea al momento de la compra, en pesos colombianos enteros."@es ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range xsd:integer .
+
+:realizaPedido a owl:ObjectProperty ;
+    rdfs:label "realiza pedido"@es ;
+    rdfs:comment "El comprador realiza el pedido. Un pedido tiene exactamente un comprador; un comprador puede realizar cero o más pedidos."@es ;
+    rdfs:domain :Comprador ;
+    rdfs:range :Pedido .
+
+:subtotalLinea a owl:DatatypeProperty ;
+    rdfs:label "subtotal de la línea"@es ;
+    rdfs:comment "cantidad × precioUnitarioCompra; valor derivado, en pesos colombianos enteros."@es ;
+    rdfs:domain :DetallePedido ;
+    rdfs:range xsd:integer .
+
+:tieneDetalle a owl:ObjectProperty ;
+    rdfs:label "tiene detalle"@es ;
+    rdfs:comment "El pedido contiene una línea. Un pedido tiene una o más líneas; cada línea pertenece a un solo pedido."@es ;
+    rdfs:domain :Pedido ;
+    rdfs:range :DetallePedido .
+
+:totalPedido a owl:DatatypeProperty ;
+    rdfs:label "total del pedido"@es ;
+    rdfs:comment "Suma de los subtotales de las líneas, en pesos colombianos enteros."@es ;
+    rdfs:domain :Pedido ;
+    rdfs:range xsd:integer .
+
+:ProductoDeOrganizacion a owl:Class ;
+    rdfs:label "Producto de organización"@es ;
+    rdfs:comment "Producto del catálogo que guarda, protege u ordena útiles: Carpeta y Estuche."@es ;
+    rdfs:subClassOf :Producto .
+
+:boligrafo001 a :ProductoDeEscritura,
+        owl:NamedIndividual ;
+    rdfs:label "Bolígrafo 001"@es ;
+    :descripcionProducto "Bolígrafo de tinta azul." ;
+    :nombreProducto "Bolígrafo" ;
+    :precioActual 2500 .
+
+:cuaderno001 a :ProductoDeEscritura,
+        owl:NamedIndividual ;
+    rdfs:label "Cuaderno 001"@es ;
+    :descripcionProducto "Cuaderno de 100 hojas..." ;
+    :nombreProducto "Cuaderno" ;
+    :precioActual 12000 .
+
+:detalle001 a :DetallePedido,
+        owl:NamedIndividual ;
+    rdfs:label "Detalle 001"@es ;
+    :cantidad 2 ;
+    :correspondeA :cuaderno001 ;
+    :precioUnitarioCompra 12000 ;
+    :subtotalLinea 24000 .
+
+:detalle002 a :DetallePedido,
+        owl:NamedIndividual ;
+    rdfs:label "Detalle 002"@es ;
+    :cantidad 1 ;
+    :correspondeA :boligrafo001 ;
+    :precioUnitarioCompra 2500 ;
+    :subtotalLinea 2500 .
+
+:pedido001 a :Pedido,
+        owl:NamedIndividual ;
+    rdfs:label "Pedido 001"@es ;
+    :fechaPedido "2026-10-19T14:36:47+00:00"^^xsd:dateTime ;
+    :tieneDetalle :detalle001,
+        :detalle002 ;
+    :totalPedido 26500 .
+
+:ProductoDeEscritura a owl:Class ;
+    rdfs:label "Producto de escritura"@es ;
+    rdfs:comment "Producto del catálogo que se usa para escribir, resaltar o registrar: Cuaderno, Bolígrafo, Resaltador y Agenda."@es ;
+    rdfs:subClassOf :Producto .
+
+:Comprador a owl:Class ;
+    rdfs:label "Comprador"@es ;
+    rdfs:comment "Agente que realiza un pedido. Se reifica a partir del nombre y el correo guardados en pedidos; no tiene tabla propia ni identidad estable."@es .
+
+:Pedido a owl:Class ;
+    rdfs:label "Pedido"@es ;
+    rdfs:comment "Compra registrada con fecha y total."@es .
+
+:Producto a owl:Class ;
+    rdfs:label "Producto"@es ;
+    rdfs:comment "Artículo del catálogo con nombre, descripción y precio actual."@es .
+
+:DetallePedido a owl:Class ;
+    rdfs:label "Detalle de pedido"@es ;
+    rdfs:comment "Línea de un pedido: producto, cantidad y precio unitario congelado al comprar."@es .
+

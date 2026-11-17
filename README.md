@@ -97,5 +97,6 @@ La tienda maneja pocos recursos claros (*productos* y *pedidos*) y operaciones s
 - [docs/PRUEBAS.md](docs/PRUEBAS.md) — casos de aceptación con evidencia.
 - [docs/APORTES.md](docs/APORTES.md) — aportes del integrante.
 - [docs/CONTRATO_API.md](docs/CONTRATO_API.md) — contrato entregado por el docente.
+- [docs/ontologia/](docs/ontologia/) — diagrama editable, exportaciones, ficha del modelo y ontología OWL para Protégé (Seguimiento 10 %).
 
 El primer commit del repositorio corresponde a la base suministrada (`Base_Ecommerce_Practica20`); los siguientes contienen el desarrollo propio.
